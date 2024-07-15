@@ -87,7 +87,7 @@ def detect_emotions(video_file):
     out.release()
     cv2.destroyAllWindows()
 
-    API_KEY = "559369807055d769c818eeff7ad8fb07de313054"
+    API_KEY = "your_api_key"
     try:
         deepgram = DeepgramClient(API_KEY)
         with open(video_file, "rb") as file:
@@ -143,7 +143,7 @@ def get_transcript():
     return transcript
 
 def final_report():
-    co = cohere.Client(api_key="ssKgGMQGAM6wBhRQYTaZhFPTtpPVUM6Xws4tRv3C")
+    co = cohere.Client(api_key="your_api_key")
     message = (
         f"Summarize how this person particularly felt about saying the following transcript: {transcript} "
         f"and also by taking into account the emotion scores obtained from the facial sentiment analysis "
